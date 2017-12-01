@@ -6,12 +6,16 @@
 </head>
 <body>
 	<script>
-		var name = prompt(`Как тебя зовут?`) + `,` + ` `;
-		var age = prompt(`Сколько тебе лет?`);
+		var name;
+		var age;
 		
-		while (isNaN(age)) {
-			age = prompt(`Введи правильный возвраст`);
-		}
+		do {
+			name = prompt(`Как тебя зовут?`) + `,` + ` `;
+		}while ((name === `null, `) || (name === `, `))
+		
+		do {
+			age = prompt(`Сколько тебе лет?`);
+		}while ((isNaN(age)) || (age <= 0))
 
 		var smoke = confirm(`Ты куришь?`);
 
@@ -27,7 +31,7 @@
 			else {
 				console.log(name + `маме раскажу`);
 			}
-			
+
 	</script>
 </body>
 </html>
