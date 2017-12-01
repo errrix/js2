@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dz2</title>
+</head>
+<body>
+	<script>
+		var name = prompt(`Как тебя зовут?`) + `,` + ` `;
+		var age = prompt(`Сколько тебе лет?`);
+		
+		while (isNaN(age)) {
+			age = prompt(`Введи правильный возвраст`);
+		}
+
+		var smoke = confirm(`Ты куришь?`);
+
+		if ((age < 18) && (smoke === false)) {
+			console.log(name + `так держать!`);
+		}
+			else if ((age >= 18) && (smoke === false)) {
+				console.log(name + `молодец, и не надо`);
+			}
+			else if ((age >= 18) && (smoke === true)) {
+				console.log(name + `ну и зря`);
+			}
+			else {
+				console.log(name + `маме раскажу`);
+			}
+			
+	</script>
+</body>
+</html>
